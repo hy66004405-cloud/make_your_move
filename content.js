@@ -1,0 +1,12 @@
+import { tasteImages } from './taste-images.js';
+export const categories={
+ design:{title:'Design project',line:'Design<br>project.',kicker:'01 / THE PAWN',description:'작은 질문에서 시작해, 명확한 형태로. 브랜드와 사람을 연결하는 디자인을 만듭니다.',piece:'PAWN',items:[
+  {title:'온도 — Everyday rituals',tag:'BRAND IDENTITY / PACKAGING',art:'<div class="poster"><small>EVERYDAY RITUALS</small><strong>온도</strong><div class="circle"></div><small>A MOMENT OF STILLNESS</small></div>',cls:'',description:'일상의 작은 쉼을 제안하는 차 브랜드의 가상 아이덴티티입니다. 이름, 여백, 담백한 패키지로 차분한 경험을 구성했습니다.',role:'Brand strategy · Visual identity · Packaging',process:'브랜드 키워드 → 타이포그래피 → 패키지 시스템'},
+  {title:'Margin — Room to think',tag:'PRODUCT DESIGN / UX · UI',art:'<div class="mock-screen"><small>margin / YOUR DAILY SPACE</small><p><strong>Less noise.<br>More room.</strong></p><div class="bars"><span></span><span></span></div></div>',cls:'art-dark',description:'복잡한 하루에 생각할 여백을 만드는 생산성 서비스 콘셉트입니다. 가장 중요한 일에 집중하는 화면 구조를 탐구했습니다.',role:'UX research · Interface design · Prototyping',process:'문제 정의 → 정보 구조 → 인터랙션 설계'},
+  {title:'Between — A visual dialogue',tag:'ART DIRECTION / EDITORIAL',art:'<div class="art-type">between<em>the lines.</em></div>',cls:'',description:'형태와 여백의 관계를 다룬 에디토리얼 콘셉트입니다. 활자의 크기와 대비만으로 페이지의 리듬을 설계했습니다.',role:'Art direction · Typography · Editorial',process:'시각 리서치 → 그리드 연구 → 편집 시스템'}]},
+ taste:{title:'Taste archive',line:'Taste<br>archive.',kicker:'02 / THE BISHOP',description:'형태, 색, 그리고 시선. 그래픽 디자인 보드에서 모은 18개의 장면.',piece:'BISHOP',items:tasteImages},
+ experiment:{title:'Experiment',line:'Experi<br>ment.',kicker:'03 / THE KNIGHT',description:'정해진 경로에서 한 걸음 옆으로. 움직임과 형태, 디지털 재료의 가능성을 실험합니다.',piece:'KNIGHT',items:[
+  {title:'001 / Soft oscillation',tag:'MOTION / RHYTHM',art:'<div class="motion-shapes"><i></i><i></i><i></i><i></i></div>',cls:'art-dark',description:'위상이 서로 다른 움직임을 겹쳐 자연스러운 리듬을 만드는 모션 스터디입니다.',role:'Motion design · Creative coding',process:'시간차 설정 → 진폭 조절 → 반복 리듬'},
+  {title:'002 / Matter & light',tag:'3D / MATERIAL STUDY',art:'<div class="orb-study"></div>',cls:'',description:'하나의 구체에 빛의 위치와 명암을 달리해 부피의 인상이 어떻게 바뀌는지 탐구하는 시각 연구입니다.',role:'Lighting study · Shading',process:'기본 형태 → 광원 배치 → 명암 조절'},
+  {title:'003 / A different opening',tag:'INTERACTION / SPATIAL DESIGN',art:'<div class="grid-study"></div>',cls:'',description:'체스의 전개를 웹사이트의 탐색 방식으로 옮긴 공간 인터랙션 실험입니다. 선택, 집중, 진입의 세 단계를 연결합니다.',role:'Interaction design · 3D development',process:'체스 좌표 → 카메라 전환 → 공간 탐색'}]}
+};

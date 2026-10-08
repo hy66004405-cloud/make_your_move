@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#292929"><meta name="description" content="A designer’s opening. 디자인, 취향, 실험을 탐색하는 인터랙티브 3D 포트폴리오."><title>OPENING — A designer’s perspective</title><link rel="stylesheet" href="style.css?v=45"><script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script></head>
+<body data-view="board" data-opening="opening">
+<div class="grain" aria-hidden="true"></div>
+<div class="reveal-world" id="reveal-world" aria-label="스크롤하여 체스판을 열어보세요">
+  <div class="reveal-caption"><span>OPENING — 01</span><span>SCROLL TO REVEAL</span></div>
+</div>
+
+<header class="header"><a href="#" class="wordmark" id="home" aria-label="체스판 처음 화면">opening<span>®</span></a><span class="header-note">A DESIGNER’S PERSPECTIVE</span><button class="index-button" id="index-toggle" aria-expanded="false" aria-controls="index-menu">Index <span>＋</span></button></header>
+<main>
+<section class="world" aria-label="인터랙티브 체스 포트폴리오"><div id="canvas-container"></div><div class="board-edge-blur" aria-hidden="true"></div><div id="circle-grid" class="circle-grid" aria-hidden="true"></div><div id="flat-circle" class="flat-circle" role="img" aria-label="반투명 원" hidden></div><div id="piece-controls" aria-label="백색 폰"></div>
+<div id="pawn-caption" class="pawn-caption" role="status" aria-live="polite" aria-hidden="true" hidden><div class="pawn-caption-mask"><span data-pawn-hello aria-hidden="true">Hello, player.</span><span data-pawn-move aria-hidden="true">Make your move!</span></div></div>
+<div class="intro" id="intro"><p class="micro">PORTFOLIO — VOL. 01</p><h1>Every move<br>has a <em>meaning.</em></h1><p class="intro-sub">생각을 움직이고, 새로운 장면을 만듭니다.</p></div>
+<div class="board-note" id="board-note"><span class="tiny-cross">＋</span><p>THE ITALIAN GAME</p><span>Seven pieces. Three perspectives.</span></div>
+<div class="board-instruction" id="board-instruction"><span class="pulse-dot"></span><span>한 번 더 스크롤해 사이드 뷰로 전환</span><span class="instruction-rule"></span><span class="micro">02 / SIDE VIEW</span></div>
+<div class="focus-copy" id="focus-copy" hidden><p class="micro" id="focus-kicker"></p><h2 id="focus-title"><button id="title-link" type="button" aria-label="컬렉션으로 이동"></button></h2><p id="focus-description"></p><button id="enter-button" class="text-link">Explore collection <span>↗</span></button><span class="focus-hint">말을 다시 누르면 입장 · 빈 배경을 누르면 돌아가기</span></div>
+<button class="back-button" id="back-button" hidden>↖ <span>Back to the opening</span></button>
+<div class="focus-meta" id="focus-meta" hidden><span id="piece-name"></span><span>FORM / PERSPECTIVE / POSSIBILITY</span></div>
+<div class="loading" id="loading"><span class="loading-icon">♟</span><span class="micro">SETTING THE OPENING</span></div>
+<div class="fallback" id="fallback" hidden><h2>Explore the collection.</h2><p>이 브라우저에서 3D 화면을 표시할 수 없습니다.<br>아래에서 각 컬렉션을 열 수 있습니다.</p><button data-route="design">Design project ↗</button><button data-route="taste">Taste archive ↗</button><button data-route="experiment">Experiment ↗</button></div>
+</section>
+<section id="collection" class="collection" hidden tabindex="-1"><div class="collection-heading"><p class="micro" id="collection-kicker"></p><h1 id="collection-title"></h1><p id="collection-description"></p></div><div class="collection-grid" id="collection-grid"></div><div class="collection-end"><span>다음 장면은, 또 다른 움직임에서.</span><button id="collection-back" class="text-link">Return to the board ↗</button></div><p class="placeholder-note">CONCEPT PORTFOLIO · 현재 작업물은 전시 구성을 위한 예시입니다.</p></section>
+</main>
+<footer class="footer" id="footer"><span>INDEPENDENT DESIGNER<br><span class="muted">BASED IN SEOUL, KR</span></span><div class="legend"><span>♟ <span>Design project</span></span><span>♝ <span>Taste archive</span></span><span>♞ <span>Experiment</span></span></div><span class="edition">SELECTED WORKS<br><span class="muted">2024 — 2026</span></span></footer>
+
+<p class="circle-instruction">스크롤하거나 클릭해 작업물 보기</p>
+<aside id="index-menu" class="index-menu" hidden><p class="micro">THREE PERSPECTIVES</p><button data-select="pawn"><span>01</span> Design project <i>↗</i></button><button data-select="bishop"><span>02</span> Taste archive <i>↗</i></button><button data-select="knight"><span>03</span> Experiment <i>↗</i></button><p>체스말을 통해 서로 다른 관점을 만나보세요.</p></aside>
+<dialog id="detail"><button id="detail-close" aria-label="프로젝트 닫기">Close ×</button><div id="detail-content"></div></dialog>
+
+<section id="workboard" class="workboard" aria-label="작업물 체스보드" hidden>
+ <header class="workboard-toolbar"><span class="workboard-wordmark">opening<sup>®</sup></span><h1 id="workboard-title" tabindex="-1">WORKS <span>25 IMAGES / 6 PROJECTS</span></h1><button id="workboard-back">← 원으로 돌아가기</button></header>
+ <div class="workboard-space"><div id="work-plane" class="work-plane" aria-label="하얀 칸에 배치된 작업물 25개"></div></div>
+ <footer class="workboard-footer"><span>드래그로 탐색<span class="workboard-help"> / 아래로 스크롤해 엔딩 보기</span></span><button id="workboard-ending">CONTACT ↓</button><button id="workboard-fit">넓게 보기 ↙</button></footer>
+</section>
+<section id="ending" class="ending" aria-label="엔딩 및 연락처" hidden>
+ <div class="ending-scene" aria-hidden="true"></div>
+ <header class="ending-header"><button id="ending-back">↑ 작업물로 돌아가기</button><span>THE NEXT MOVE</span></header>
+ <div class="ending-contact"><p>CONTACT</p><a href="mailto:hy66004405@gmail.com">hy66004405@gmail.com</a></div>
+</section>
+<dialog id="work-viewer" class="work-viewer" aria-labelledby="work-detail-title">
+ <div class="work-detail-shell"><img id="work-full-image" alt="">
+  <header class="work-detail-heading"><h2 id="work-detail-title"></h2></header>
+ </div>
+</dialog>
+<div id="announcement" role="status" aria-live="polite" class="sr-only"></div>
+<noscript><div class="fallback">이 인터랙티브 포트폴리오는 JavaScript가 필요합니다.</div></noscript>
+<script type="module">
+import { coastProgress,coastDuration } from './motion.js?v=6';
+(()=>{
+ const gate=document.querySelector('#reveal-world');
+ let phase='opening',sceneReady=false,requested=false,touchY=0,touchUsed=false,lastWheel=-Infinity,lastDirection=0,wheelTravel=0,wheelUsed=false,captionBlocking=false;
+ const reduced=matchMedia('(prefers-reduced-motion: reduce)');
+ const croppedHeight=()=>Math.min(5.2,6/(innerWidth/innerHeight));
+ const setPhase=value=>{phase=value;document.body.dataset.opening=value};
+ const sceneActive=()=>!['collection','dashboard','ending'].includes(document.body.dataset.view)&&!document.querySelector('#detail').open&&document.querySelector('#index-menu').hidden;
+ let progress=0,zoomRun=0;
+ const render=()=>{
+  const start=.94/Math.max(1,innerWidth/innerHeight);
+  const height=Math.exp(Math.log(start)+(Math.log(croppedHeight())-Math.log(start))*progress);
+  if(sceneReady&&['opening','revealing','grid'].includes(phase))window.dispatchEvent(new CustomEvent('opening:zoom',{detail:{height,progress}}));
+ };
+ render();window.addEventListener('resize',render);
+ const zoom=destination=>{
+  if(!['opening','grid'].includes(phase))return;
+  requested=destination===1;if(!sceneReady)return;
+  const startHeight=.94/Math.max(1,innerWidth/innerHeight),actualHeight=Number(gate.dataset.cameraHeight);
+  const from=actualHeight>0?Math.log(actualHeight/startHeight)/Math.log(croppedHeight()/startHeight):progress;
+  setPhase('revealing');const run=++zoomRun,start=performance.now(),readyAfter=reduced.matches?1:coastDuration(580);let released=false;
+  const draw=now=>{
+   if(run!==zoomRun||!['revealing',destination===1?'grid':'opening'].includes(phase))return;
+   const elapsed=now-start,ease=reduced.matches?1:coastProgress(elapsed,580);
+   progress=from+(destination-from)*ease;render();
+   if(!released&&elapsed>=readyAfter){released=true;setPhase(destination===1?'grid':'opening');if(destination===1)gate.dataset.done='true';else delete gate.dataset.done}
+   if(!reduced.matches)requestAnimationFrame(draw);
+  };
+  requestAnimationFrame(draw);
+ };
+ window.addEventListener('opening:scene-ready',()=>{sceneReady=true;render();if(requested)zoom(1)});
+ window.addEventListener('opening:side-start',()=>setPhase('turning'));
+ window.addEventListener('opening:board-start',()=>setPhase('turning'));
+ window.addEventListener('opening:side-ready',()=>setPhase('side'));
+ window.addEventListener('opening:pawn-ready',()=>setPhase('pawn'));
+ window.addEventListener('opening:pawn-caption-active',()=>{captionBlocking=true});
+ window.addEventListener('opening:pawn-caption-inactive',()=>{captionBlocking=false});
+ window.addEventListener('opening:circle-start',()=>setPhase('morphing'));
+ window.addEventListener('opening:circle-ready',()=>setPhase('circle'));
+ window.addEventListener('opening:dashboard-start',()=>setPhase('dashboard-transition'));
+ window.addEventListener('opening:dashboard-ready',()=>setPhase('dashboard'));
+ window.addEventListener('opening:dashboard-closed',()=>setPhase('circle'));
+ window.addEventListener('opening:board-ready',()=>{progress=1;setPhase('grid')});
+ const navigate=direction=>{
+  if(direction>0){
+   if(phase==='opening')zoom(1);
+   else if(phase==='grid'){setPhase('turning');window.dispatchEvent(new Event('opening:side-view'))}
+   else if(phase==='side'){setPhase('departing');window.dispatchEvent(new Event('opening:isolate-pawn'))}
+   else if(phase==='pawn'){setPhase('morphing');window.dispatchEvent(new Event('opening:circle'))}
+   else if(phase==='circle'){setPhase('dashboard-transition');window.dispatchEvent(new Event('opening:dashboard'))}
+  }else{
+   if(phase==='circle'){setPhase('morphing');window.dispatchEvent(new Event('opening:restore-pawn'))}
+   else if(phase==='pawn'){setPhase('departing');window.dispatchEvent(new Event('opening:restore-side'))}
+   else if(phase==='side'){setPhase('turning');window.dispatchEvent(new Event('opening:restore-grid'))}
+   else if(phase==='grid')zoom(0);
+  }
+ };
+ window.addEventListener('wheel',e=>{
+  const now=performance.now(),direction=Math.sign(e.deltaY);
+  if(!direction)return;
+  const newGesture=now-lastWheel>90||direction!==lastDirection;lastWheel=now;lastDirection=direction;
+  if(newGesture){wheelTravel=0;wheelUsed=false}
+  wheelTravel+=e.deltaY*(e.deltaMode===1?16:e.deltaMode===2?innerHeight:1);
+  if(!sceneActive())return;e.preventDefault();
+  if(captionBlocking)return;
+  if(!e.ctrlKey&&!wheelUsed&&Math.abs(wheelTravel)>=1){wheelUsed=true;navigate(direction)}
+ },{passive:false});
+ window.addEventListener('touchstart',e=>{touchY=e.touches[0].clientY;touchUsed=false},{passive:true});
+ window.addEventListener('touchmove',e=>{
+  if(!sceneActive())return;e.preventDefault();
+  if(captionBlocking)return;
+  const dy=touchY-e.touches[0].clientY;
+  if(!touchUsed&&Math.abs(dy)>6){touchUsed=true;navigate(Math.sign(dy))}
+ },{passive:false});
+ window.addEventListener('keydown',e=>{
+  if(!sceneActive()||e.target?.closest('button,a,input,textarea,select,[contenteditable]'))return;
+  const direction=['ArrowUp','PageUp'].includes(e.key)||(e.key===' '&&e.shiftKey)?-1:['ArrowDown','PageDown',' ','Enter'].includes(e.key)?1:0;
+  if(direction){e.preventDefault();if(captionBlocking&&direction>0)return;if(!e.repeat)navigate(direction)}
+ });
+ gate.addEventListener('click',()=>navigate(1));
+})();
+const loadingStart=performance.now();
+const runtime=document.createElement('span');runtime.className='loading-time';runtime.textContent='0.0s';document.querySelector('#loading').append(runtime);
+const loadingTimer=setInterval(()=>runtime.textContent=((performance.now()-loadingStart)/1000).toFixed(1)+'s elapsed',100);
+window.setLoadingStage=text=>document.querySelector('#loading .micro').textContent=text;
+window.finishLoading=()=>{clearInterval(loadingTimer);document.body.dataset.loadSeconds=((performance.now()-loadingStart)/1000).toFixed(2)};
+</script>
+<script type="module">
+import('./app.js?v=112').catch(error=>{console.error(error);window.finishLoading();document.querySelector('#loading').hidden=true;document.querySelector('#fallback').hidden=false;document.querySelector('#fallback p').textContent='3D 파일을 불러오지 못했습니다. 페이지를 새로고침해 주세요.';document.querySelectorAll('[data-route]').forEach(b=>b.onclick=()=>location.reload());});
+</script>
+</body></html>
